@@ -232,7 +232,7 @@ def filter_whitespace(mode, text):
         return text
     elif mode == 'single':
         text = re.sub(r"([\t ]+)", " ", text)
-        text = re.sub(r"(\s*\n\s*)", "\n", text)
+        text = re.sub(r"(\s*\n\s*)", "\n", text)       # \s--空白字符：[<空格>\t\r\n\f\v]
         return text
     elif mode == 'oneline':
         return re.sub(r"(\s+)", " ", text)
